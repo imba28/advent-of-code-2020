@@ -50,16 +50,6 @@ func (gc *GroupAnswers) Reset() {
 	}
 }
 
-func countYes(g Group) int {
-	counts := 0
-	for _, count := range g.GroupAnswers {
-		if count == g.Member {
-			counts++
-		}
-	}
-	return counts
-}
-
 func SumOfCounts(filePath string) (int, error) {
 	f, err := os.Open("input.txt")
 	if err != nil {
