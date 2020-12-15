@@ -35,10 +35,8 @@ def crt(m, a):
 
     # (v)
     # find smallest positive result
-    if g > 0:
-        g = g - floor(g / N) * N
-    else:
-        g = g + ceil(abs(g) / N) * N
+    g = g % N
+    
     return g
 
 if __name__ == "__main__":
